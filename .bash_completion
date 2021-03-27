@@ -1,0 +1,7 @@
+# User specified bash_completion
+if [ -d "$HOME/.bash_completion.d" ]; then
+    for bc in $HOME/.bash_completion.d/*; do
+        [ -f "$bc" ] && . "$bc"
+    done
+fi
+unset bc
